@@ -16,6 +16,9 @@ jobs:
       - name: 'Checkout repository'
         uses: actions/checkout@v5
 
+      - name: 'Set up Python'
+        uses: astral-sh/setup-uv@v5
+
       - name: 'Install dependencies and build documentation'
         run: |
           uv venv
