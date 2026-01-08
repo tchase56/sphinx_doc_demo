@@ -1,0 +1,40 @@
+name: Build Sphinx Docs
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 'Checkout repository'
+        uses: actions/checkout@v5
+
+      - name: 'Install dependencies and build documentation'
+        run: |
+          uv venv
+          source .venv/bin/activate
+          uv sync --extra docs
+          make link_readme
+          make docgen
+
+      - name: 'Upload documentation artifact (PR preview)'
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: documentation-preview
+          path: docs/_build/html
+          retention-days: 7
+
+      - name: 'Deploy to GitHub Pages'
+        if: github.event_name == 'push'
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: docs/_build/html
