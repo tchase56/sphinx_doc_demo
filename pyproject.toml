@@ -3,7 +3,7 @@ name = "sphinx_doc_demo"
 version = "0.1.0"
 description = "This repository shows how to utilize sphinx to automatically create professionally formatted documents and publish them to github pages."
 readme = "README.md"
-requires-python = "==3.7.9"
+requires-python = "==3.7"
 dependencies = [
 ]
 

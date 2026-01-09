@@ -22,7 +22,7 @@ jobs:
 
       - name: 'Install dependencies and build documentation'
         run: |
-          uv venv --python 3.7.9
+          uv venv
           source .venv/bin/activate
           uv sync --extra docs
           make link_readme
