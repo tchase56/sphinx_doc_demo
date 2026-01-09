@@ -12,14 +12,14 @@ dev = [
     "black",
 ]
 docs = [
-    "sphinx>=7.0,<8.0",
-    "sphinx-rtd-theme>=3.0.2",
-    "myst-parser>=2.0.0",
+    "sphinx>=4.0,<5.0",
+    "sphinx-rtd-theme>=1.0,<2.0",
+    "myst-parser>=0.18.0,<1.0",
 ]
 
 [tool.black]
 line-length = 100
-target-version = ['py311']
+target-version = ['py37']
 include = '\.py$|\.ipynb$'
 exclude = '''
 /(
