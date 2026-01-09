@@ -10,16 +10,17 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
+    container: python:3.7-slim
 
     steps:
       - name: 'Checkout repository'
         uses: actions/checkout@v5
 
-      - name: Set up Python 3.7
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.7.9'
+      # - name: Set up Python 3.7
+      #   uses: actions/setup-python@v5
+      #   with:
+      #     python-version: '3.7.9'
 
       - name: 'Install dependencies and build documentation'
         run: |
