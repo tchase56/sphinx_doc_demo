@@ -1,0 +1,7 @@
+src.unit\_conversions.weight\_conversions module
+================================================
+
+.. automodule:: src.unit_conversions.weight_conversions
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,359 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sphinx Documentation Demo README &mdash; sphinx_doc_demo 0.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=01f34227"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Python Modules" href="python_modules.html" />
+    <link rel="prev" title="Sphinx Documentation Demo" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            sphinx_doc_demo
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Sphinx Documentation Demo README</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#requirements">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setup">Setup</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#modules">Modules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#simple-arithmetic-src-unit-conversions-helper-functions-simple-arithmetic-py">Simple Arithmetic (<code class="docutils literal notranslate"><span class="pre">src/unit_conversions/helper_functions/simple_arithmetic.py</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#unit-conversions">Unit Conversions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#distance-conversions-src-unit-conversions-distance-conversions-py">Distance Conversions (<code class="docutils literal notranslate"><span class="pre">src/unit_conversions/distance_conversions.py</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#weight-conversions-src-unit-conversions-weight-conversions-py">Weight Conversions (<code class="docutils literal notranslate"><span class="pre">src/unit_conversions/weight_conversions.py</span></code>)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#simple-string-operations-src-simple-string-py">Simple String Operations (<code class="docutils literal notranslate"><span class="pre">src/simple_string.py</span></code>)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#documentation">Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#building-documentation">Building Documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#viewing-documentation">Viewing Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#development">Development</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#available-make-commands">Available Make Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dependencies">Dependencies</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#project-structure">Project Structure</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="python_modules.html">Python Modules</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">sphinx_doc_demo</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Sphinx Documentation Demo README</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/README.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="sphinx-documentation-demo-readme">
+<h1>Sphinx Documentation Demo README<a class="headerlink" href="#sphinx-documentation-demo-readme" title="Link to this heading"></a></h1>
+<p>This repository demonstrates how to utilize Sphinx to automatically create professionally formatted documentation and publish it to GitHub Pages.</p>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>This project provides Python modules with utility functions:</p>
+<ol class="arabic simple">
+<li><p><strong>Unit Conversions</strong> - Distance and weight unit conversion functions</p></li>
+<li><p><strong>Simple Arithmetic</strong> - Basic mathematical operations (helper functions)</p></li>
+<li><p><strong>Simple String Operations</strong> - Common string manipulation functions</p></li>
+</ol>
+</section>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h2>
+<section id="requirements">
+<h3>Requirements<a class="headerlink" href="#requirements" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Python 3.11.9</p></li>
+<li><p>uv (Python package manager)</p></li>
+</ul>
+</section>
+<section id="setup">
+<h3>Setup<a class="headerlink" href="#setup" title="Link to this heading"></a></h3>
+<p>Clone the repository and synchronize dependencies:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>&lt;repository-url&gt;
+<span class="nb">cd</span><span class="w"> </span>sphinx_doc_demo
+make<span class="w"> </span>sync
+</pre></div>
+</div>
+</section>
+</section>
+<section id="modules">
+<h2>Modules<a class="headerlink" href="#modules" title="Link to this heading"></a></h2>
+<section id="simple-arithmetic-src-unit-conversions-helper-functions-simple-arithmetic-py">
+<h3>Simple Arithmetic (<code class="docutils literal notranslate"><span class="pre">src/unit_conversions/helper_functions/simple_arithmetic.py</span></code>)<a class="headerlink" href="#simple-arithmetic-src-unit-conversions-helper-functions-simple-arithmetic-py" title="Link to this heading"></a></h3>
+<p>Provides basic arithmetic operations:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">add(a,</span> <span class="pre">b)</span></code> - Add two numbers</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subtract(a,</span> <span class="pre">b)</span></code> - Subtract two numbers</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">multiply(a,</span> <span class="pre">b)</span></code> - Multiply two numbers</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">divide(a,</span> <span class="pre">b)</span></code> - Divide two numbers (with zero-check)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">power(a,</span> <span class="pre">b)</span></code> - Raise a number to a power</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">modulo(a,</span> <span class="pre">b)</span></code> - Calculate remainder of division</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">floor_divide(a,</span> <span class="pre">b)</span></code> - Perform floor division (integer division)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">absolute(a)</span></code> - Get the absolute value of a number</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">negate(a)</span></code> - Negate a number (multiply by -1)</p></li>
+</ul>
+<p><strong>Example:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">src.unit_conversions.helper_functions.simple_arithmetic</span><span class="w"> </span><span class="kn">import</span> <span class="n">add</span><span class="p">,</span> <span class="n">multiply</span><span class="p">,</span> <span class="n">power</span><span class="p">,</span> <span class="n">modulo</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>        <span class="c1"># Returns 8</span>
+<span class="n">product</span> <span class="o">=</span> <span class="n">multiply</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>  <span class="c1"># Returns 20</span>
+<span class="n">squared</span> <span class="o">=</span> <span class="n">power</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>     <span class="c1"># Returns 8</span>
+<span class="n">remainder</span> <span class="o">=</span> <span class="n">modulo</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="c1"># Returns 1</span>
+</pre></div>
+</div>
+</section>
+<section id="unit-conversions">
+<h3>Unit Conversions<a class="headerlink" href="#unit-conversions" title="Link to this heading"></a></h3>
+<section id="distance-conversions-src-unit-conversions-distance-conversions-py">
+<h4>Distance Conversions (<code class="docutils literal notranslate"><span class="pre">src/unit_conversions/distance_conversions.py</span></code>)<a class="headerlink" href="#distance-conversions-src-unit-conversions-distance-conversions-py" title="Link to this heading"></a></h4>
+<p>Convert between different distance units:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">mi_to_km(miles)</span></code> - Convert miles to kilometers</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">km_to_mi(kilometers)</span></code> - Convert kilometers to miles</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ft_to_m(feet)</span></code> - Convert feet to meters</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">m_to_ft(meters)</span></code> - Convert meters to feet</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">m_to_km(meters)</span></code> - Convert meters to kilometers</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">km_to_m(kilometers)</span></code> - Convert kilometers to meters</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">m_to_cm(meters)</span></code> - Convert meters to centimeters</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cm_to_m(centimeters)</span></code> - Convert centimeters to meters</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mi_to_ft(miles)</span></code> - Convert miles to feet</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ft_to_mi(feet)</span></code> - Convert feet to miles</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ft_to_in(feet)</span></code> - Convert feet to inches</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">in_to_ft(inches)</span></code> - Convert inches to feet</p></li>
+</ul>
+<p><strong>Example:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">src.unit_conversions.distance_conversions</span><span class="w"> </span><span class="kn">import</span> <span class="n">mi_to_km</span><span class="p">,</span> <span class="n">ft_to_m</span>
+
+<span class="n">km</span> <span class="o">=</span> <span class="n">mi_to_km</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>  <span class="c1"># Returns approximately 8.047</span>
+<span class="n">meters</span> <span class="o">=</span> <span class="n">ft_to_m</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>  <span class="c1"># Returns approximately 3.048</span>
+</pre></div>
+</div>
+</section>
+<section id="weight-conversions-src-unit-conversions-weight-conversions-py">
+<h4>Weight Conversions (<code class="docutils literal notranslate"><span class="pre">src/unit_conversions/weight_conversions.py</span></code>)<a class="headerlink" href="#weight-conversions-src-unit-conversions-weight-conversions-py" title="Link to this heading"></a></h4>
+<p>Convert between different weight units:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">lb_to_kg(pounds)</span></code> - Convert pounds to kilograms</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kg_to_lb(kilograms)</span></code> - Convert kilograms to pounds</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oz_to_g(ounces)</span></code> - Convert ounces to grams</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">g_to_oz(grams)</span></code> - Convert grams to ounces</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kg_to_g(kilograms)</span></code> - Convert kilograms to grams</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">g_to_kg(grams)</span></code> - Convert grams to kilograms</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">g_to_mg(grams)</span></code> - Convert grams to milligrams</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mg_to_g(milligrams)</span></code> - Convert milligrams to grams</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lb_to_oz(pounds)</span></code> - Convert pounds to ounces</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oz_to_lb(ounces)</span></code> - Convert ounces to pounds</p></li>
+</ul>
+<p><strong>Example:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">src.unit_conversions.weight_conversions</span><span class="w"> </span><span class="kn">import</span> <span class="n">lb_to_kg</span><span class="p">,</span> <span class="n">oz_to_g</span>
+
+<span class="n">kg</span> <span class="o">=</span> <span class="n">lb_to_kg</span><span class="p">(</span><span class="mi">150</span><span class="p">)</span>  <span class="c1"># Returns approximately 68.04</span>
+<span class="n">grams</span> <span class="o">=</span> <span class="n">oz_to_g</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span>    <span class="c1"># Returns approximately 453.59</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="simple-string-operations-src-simple-string-py">
+<h3>Simple String Operations (<code class="docutils literal notranslate"><span class="pre">src/simple_string.py</span></code>)<a class="headerlink" href="#simple-string-operations-src-simple-string-py" title="Link to this heading"></a></h3>
+<p>Provides common string manipulation functions:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">concatenate(str1,</span> <span class="pre">str2)</span></code> - Combine two strings</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">to_uppercase(text)</span></code> / <code class="docutils literal notranslate"><span class="pre">to_lowercase(text)</span></code> - Change case</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">reverse_string(text)</span></code> - Reverse a string</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">count_characters(text)</span></code> / <code class="docutils literal notranslate"><span class="pre">count_words(text)</span></code> - Count characters or words</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replace_substring(text,</span> <span class="pre">old,</span> <span class="pre">new)</span></code> - Replace substrings</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">split_string(text,</span> <span class="pre">delimiter)</span></code> - Split string into list</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">join_strings(strings,</span> <span class="pre">separator)</span></code> - Join list into string</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">starts_with(text,</span> <span class="pre">prefix)</span></code> / <code class="docutils literal notranslate"><span class="pre">ends_with(text,</span> <span class="pre">suffix)</span></code> - Check string boundaries</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">contains_substring(text,</span> <span class="pre">substring)</span></code> - Check if substring exists</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">get_substring(text,</span> <span class="pre">start,</span> <span class="pre">end)</span></code> - Extract substring</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">is_numeric(text)</span></code> / <code class="docutils literal notranslate"><span class="pre">is_alphabetic(text)</span></code> - Check string type</p></li>
+</ul>
+<p><strong>Example:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">src.simple_string</span><span class="w"> </span><span class="kn">import</span> <span class="n">concatenate</span><span class="p">,</span> <span class="n">reverse_string</span><span class="p">,</span> <span class="n">split_string</span>
+
+<span class="n">greeting</span> <span class="o">=</span> <span class="n">concatenate</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">,</span> <span class="s2">&quot;World&quot;</span><span class="p">)</span>  <span class="c1"># Returns &quot;HelloWorld&quot;</span>
+<span class="n">reversed_text</span> <span class="o">=</span> <span class="n">reverse_string</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">)</span>   <span class="c1"># Returns &quot;olleh&quot;</span>
+<span class="n">words</span> <span class="o">=</span> <span class="n">split_string</span><span class="p">(</span><span class="s2">&quot;hello,world&quot;</span><span class="p">,</span> <span class="s2">&quot;,&quot;</span><span class="p">)</span>  <span class="c1"># Returns [&#39;hello&#39;, &#39;world&#39;]</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="documentation">
+<h2>Documentation<a class="headerlink" href="#documentation" title="Link to this heading"></a></h2>
+<section id="building-documentation">
+<h3>Building Documentation<a class="headerlink" href="#building-documentation" title="Link to this heading"></a></h3>
+<p>Generate HTML documentation using Sphinx:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>link_readme<span class="w"> </span><span class="c1"># only needs to be ran once</span>
+make<span class="w"> </span>docgen
+</pre></div>
+</div>
+<p>The generated documentation will be in <code class="docutils literal notranslate"><span class="pre">docs/_build/html/</span></code>.</p>
+</section>
+<section id="viewing-documentation">
+<h3>Viewing Documentation<a class="headerlink" href="#viewing-documentation" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Viewing locally</p>
+<ul class="simple">
+<li><p>Open <code class="docutils literal notranslate"><span class="pre">docs/_build/html/index.html</span></code> in your browser to view the documentation.</p></li>
+</ul>
+</li>
+<li><p>Viewing in github pages</p>
+<ul class="simple">
+<li><p>Type the following URL pattern into the browser</p>
+<ul>
+<li><p>http:<organization-name>.GitHub.io/<repo-name></p></li>
+</ul>
+</li>
+<li><p>Open the documentation directly from the repo</p>
+<ul>
+<li><p>Go to the repository’s Settings.</p></li>
+<li><p>Select Pages on the left pane and start configuring.</p></li>
+<li><p>Click Visit site button at the top of the page</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</section>
+</section>
+<section id="development">
+<h2>Development<a class="headerlink" href="#development" title="Link to this heading"></a></h2>
+<section id="available-make-commands">
+<h3>Available Make Commands<a class="headerlink" href="#available-make-commands" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">sync</span></code> - Synchronize project dependencies</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">docgen</span></code> - Generate HTML documentation with Sphinx</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">link_readme</span></code> - Create symbolic link for README.md in docs/</p></li>
+</ul>
+</section>
+<section id="dependencies">
+<h3>Dependencies<a class="headerlink" href="#dependencies" title="Link to this heading"></a></h3>
+<p><strong>Development:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">black</span></code> - Code formatter</p></li>
+</ul>
+<p><strong>Documentation:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">sphinx</span></code> (&gt;=7.0, &lt;8.0) - Documentation generator</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sphinx-rtd-theme</span></code> (&gt;=3.0.2) - Read the Docs theme</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">myst-parser</span></code> (&gt;=2.0.0) - Markdown support for Sphinx</p></li>
+</ul>
+</section>
+</section>
+<section id="project-structure">
+<h2>Project Structure<a class="headerlink" href="#project-structure" title="Link to this heading"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sphinx_doc_demo/
+├── Makefile                  # Build automation
+├── pyproject.toml            # Project configuration
+├── README.md                 # This file
+├── docs/                     # Sphinx documentation
+│   ├── conf.py              # Sphinx configuration
+│   ├── index.rst            # Documentation index
+│   ├── python_modules.rst   # Python modules documentation
+│   ├── api/                 # Auto-generated API docs
+│   └── _build/              # Generated documentation
+│       └── html/            # HTML output
+└── src/                     # Source code
+    ├── __init__.py
+    ├── simple_string.py     # String operations
+    └── unit_conversions/    # Unit conversion modules
+        ├── __init__.py
+        ├── distance_conversions.py
+        ├── weight_conversions.py
+        └── helper_functions/
+            ├── __init__.py
+            └── simple_arithmetic.py
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Sphinx Documentation Demo" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="python_modules.html" class="btn btn-neutral float-right" title="Python Modules" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright (&#39;2026/01/08&#39;, {&#39;Tyler Chase&#39;}).</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

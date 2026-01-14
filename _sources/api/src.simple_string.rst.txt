@@ -1,0 +1,7 @@
+src.simple\_string module
+=========================
+
+.. automodule:: src.simple_string
+   :members:
+   :undoc-members:
+   :show-inheritance:

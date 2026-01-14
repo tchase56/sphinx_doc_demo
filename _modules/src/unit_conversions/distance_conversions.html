@@ -1,0 +1,452 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>src.unit_conversions.distance_conversions &mdash; sphinx_doc_demo 0.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=01f34227"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            sphinx_doc_demo
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../README.html">Sphinx Documentation Demo README</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../python_modules.html">Python Modules</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">sphinx_doc_demo</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">src.unit_conversions.distance_conversions</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for src.unit_conversions.distance_conversions</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Distance Conversion Module</span>
+
+<span class="sd">This module provides functions for converting between common distance units.</span>
+<span class="sd">All conversions use helper functions from simple_arithmetic for calculations.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">.helper_functions.simple_arithmetic</span><span class="w"> </span><span class="kn">import</span> <span class="n">multiply</span>
+
+
+<span class="c1"># Conversion factors</span>
+<span class="n">M_TO_KM</span> <span class="o">=</span> <span class="mf">0.001</span>
+<span class="n">KM_TO_M</span> <span class="o">=</span> <span class="mf">1000.0</span>
+<span class="n">M_TO_CM</span> <span class="o">=</span> <span class="mf">100.0</span>
+<span class="n">CM_TO_M</span> <span class="o">=</span> <span class="mf">0.01</span>
+<span class="n">MI_TO_FT</span> <span class="o">=</span> <span class="mf">5280.0</span>
+<span class="n">FT_TO_MI</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="mf">5280.0</span>
+<span class="n">FT_TO_IN</span> <span class="o">=</span> <span class="mf">12.0</span>
+<span class="n">IN_TO_FT</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="mf">12.0</span>
+<span class="n">M_TO_FT</span> <span class="o">=</span> <span class="mf">3.28084</span>
+<span class="n">FT_TO_M</span> <span class="o">=</span> <span class="mf">0.3048</span>
+<span class="n">KM_TO_MI</span> <span class="o">=</span> <span class="mf">0.621371</span>
+<span class="n">MI_TO_KM</span> <span class="o">=</span> <span class="mf">1.60934</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_validate_distance</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">unit</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Validate that a distance value is non-negative.</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        value (float): The distance value to validate</span>
+<span class="sd">        unit (str): The unit name for error messaging</span>
+<span class="sd">    </span>
+<span class="sd">    Raises:</span>
+<span class="sd">        ValueError: If the value is negative</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">value</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Distance in </span><span class="si">{</span><span class="n">unit</span><span class="si">}</span><span class="s2"> cannot be negative: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="m_to_km">
+<a class="viewcode-back" href="../../../api/src.unit_conversions.distance_conversions.html#src.unit_conversions.distance_conversions.m_to_km">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">m_to_km</span><span class="p">(</span><span class="n">meters</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Convert meters to kilometers.</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        meters (float): Distance in meters</span>
+<span class="sd">    </span>
+<span class="sd">    Returns:</span>
+<span class="sd">        float: Distance in kilometers</span>
+<span class="sd">    </span>
+<span class="sd">    Raises:</span>
+<span class="sd">        ValueError: If meters is negative</span>
+<span class="sd">    </span>
+<span class="sd">    Example:</span>
+<span class="sd">        &gt;&gt;&gt; m_to_km(1000)</span>
+<span class="sd">        1.0</span>
+<span class="sd">        &gt;&gt;&gt; m_to_km(5000)</span>
+<span class="sd">        5.0</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_validate_distance</span><span class="p">(</span><span class="n">meters</span><span class="p">,</span> <span class="s2">&quot;meters&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">multiply</span><span class="p">(</span><span class="n">meters</span><span class="p">,</span> <span class="n">M_TO_KM</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="km_to_m">
+<a class="viewcode-back" href="../../../api/src.unit_conversions.distance_conversions.html#src.unit_conversions.distance_conversions.km_to_m">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">km_to_m</span><span class="p">(</span><span class="n">kilometers</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Convert kilometers to meters.</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        kilometers (float): Distance in kilometers</span>
+<span class="sd">    </span>
+<span class="sd">    Returns:</span>
+<span class="sd">        float: Distance in meters</span>
+<span class="sd">    </span>
+<span class="sd">    Raises:</span>
+<span class="sd">        ValueError: If kilometers is negative</span>
+<span class="sd">    </span>
+<span class="sd">    Example:</span>
+<span class="sd">        &gt;&gt;&gt; km_to_m(1)</span>
+<span class="sd">        1000.0</span>
+<span class="sd">        &gt;&gt;&gt; km_to_m(2.5)</span>
+<span class="sd">        2500.0</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_validate_distance</span><span class="p">(</span><span class="n">kilometers</span><span class="p">,</span> <span class="s2">&quot;kilometers&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">multiply</span><span class="p">(</span><span class="n">kilometers</span><span class="p">,</span> <span class="n">KM_TO_M</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="m_to_cm">
+<a class="viewcode-back" href="../../../api/src.unit_conversions.distance_conversions.html#src.unit_conversions.distance_conversions.m_to_cm">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">m_to_cm</span><span class="p">(</span><span class="n">meters</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Convert meters to centimeters.</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        meters (float): Distance in meters</span>
+<span class="sd">    </span>
+<span class="sd">    Returns:</span>
+<span class="sd">        float: Distance in centimeters</span>
+<span class="sd">    </span>
+<span class="sd">    Raises:</span>
+<span class="sd">        ValueError: If meters is negative</span>
+<span class="sd">    </span>
+<span class="sd">    Example:</span>
+<span class="sd">        &gt;&gt;&gt; m_to_cm(1)</span>
+<span class="sd">        100.0</span>
+<span class="sd">        &gt;&gt;&gt; m_to_cm(2.5)</span>
+<span class="sd">        250.0</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_validate_distance</span><span class="p">(</span><span class="n">meters</span><span class="p">,</span> <span class="s2">&quot;meters&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">multiply</span><span class="p">(</span><span class="n">meters</span><span class="p">,</span> <span class="n">M_TO_CM</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="cm_to_m">
+<a class="viewcode-back" href="../../../api/src.unit_conversions.distance_conversions.html#src.unit_conversions.distance_conversions.cm_to_m">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">cm_to_m</span><span class="p">(</span><span class="n">centimeters</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Convert centimeters to meters.</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        centimeters (float): Distance in centimeters</span>
+<span class="sd">    </span>
+<span class="sd">    Returns:</span>
+<span class="sd">        float: Distance in meters</span>
+<span class="sd">    </span>
+<span class="sd">    Raises:</span>
+<span class="sd">        ValueError: If centimeters is negative</span>
+<span class="sd">    </span>
+<span class="sd">    Example:</span>
+<span class="sd">        &gt;&gt;&gt; cm_to_m(100)</span>
+<span class="sd">        1.0</span>
+<span class="sd">        &gt;&gt;&gt; cm_to_m(250)</span>
+<span class="sd">        2.5</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_validate_distance</span><span class="p">(</span><span class="n">centimeters</span><span class="p">,</span> <span class="s2">&quot;centimeters&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">multiply</span><span class="p">(</span><span class="n">centimeters</span><span class="p">,</span> <span class="n">CM_TO_M</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="mi_to_ft">
+<a class="viewcode-back" href="../../../api/src.unit_conversions.distance_conversions.html#src.unit_conversions.distance_conversions.mi_to_ft">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">mi_to_ft</span><span class="p">(</span><span class="n">miles</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Convert miles to feet.</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        miles (float): Distance in miles</span>
+<span class="sd">    </span>
+<span class="sd">    Returns:</span>
+<span class="sd">        float: Distance in feet</span>
+<span class="sd">    </span>
+<span class="sd">    Raises:</span>
+<span class="sd">        ValueError: If miles is negative</span>
+<span class="sd">    </span>
+<span class="sd">    Example:</span>
+<span class="sd">        &gt;&gt;&gt; mi_to_ft(1)</span>
+<span class="sd">        5280.0</span>
+<span class="sd">        &gt;&gt;&gt; mi_to_ft(0.5)</span>
+<span class="sd">        2640.0</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_validate_distance</span><span class="p">(</span><span class="n">miles</span><span class="p">,</span> <span class="s2">&quot;miles&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">multiply</span><span class="p">(</span><span class="n">miles</span><span class="p">,</span> <span class="n">MI_TO_FT</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="ft_to_mi">
+<a class="viewcode-back" href="../../../api/src.unit_conversions.distance_conversions.html#src.unit_conversions.distance_conversions.ft_to_mi">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">ft_to_mi</span><span class="p">(</span><span class="n">feet</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Convert feet to miles.</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        feet (float): Distance in feet</span>
+<span class="sd">    </span>
+<span class="sd">    Returns:</span>
+<span class="sd">        float: Distance in miles</span>
+<span class="sd">    </span>
+<span class="sd">    Raises:</span>
+<span class="sd">        ValueError: If feet is negative</span>
+<span class="sd">    </span>
+<span class="sd">    Example:</span>
+<span class="sd">        &gt;&gt;&gt; ft_to_mi(5280)</span>
+<span class="sd">        1.0</span>
+<span class="sd">        &gt;&gt;&gt; ft_to_mi(2640)</span>
+<span class="sd">        0.5</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_validate_distance</span><span class="p">(</span><span class="n">feet</span><span class="p">,</span> <span class="s2">&quot;feet&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">multiply</span><span class="p">(</span><span class="n">feet</span><span class="p">,</span> <span class="n">FT_TO_MI</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="ft_to_in">
+<a class="viewcode-back" href="../../../api/src.unit_conversions.distance_conversions.html#src.unit_conversions.distance_conversions.ft_to_in">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">ft_to_in</span><span class="p">(</span><span class="n">feet</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Convert feet to inches.</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        feet (float): Distance in feet</span>
+<span class="sd">    </span>
+<span class="sd">    Returns:</span>
+<span class="sd">        float: Distance in inches</span>
+<span class="sd">    </span>
+<span class="sd">    Raises:</span>
+<span class="sd">        ValueError: If feet is negative</span>
+<span class="sd">    </span>
+<span class="sd">    Example:</span>
+<span class="sd">        &gt;&gt;&gt; ft_to_in(1)</span>
+<span class="sd">        12.0</span>
+<span class="sd">        &gt;&gt;&gt; ft_to_in(2.5)</span>
+<span class="sd">        30.0</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_validate_distance</span><span class="p">(</span><span class="n">feet</span><span class="p">,</span> <span class="s2">&quot;feet&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">multiply</span><span class="p">(</span><span class="n">feet</span><span class="p">,</span> <span class="n">FT_TO_IN</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="in_to_ft">
+<a class="viewcode-back" href="../../../api/src.unit_conversions.distance_conversions.html#src.unit_conversions.distance_conversions.in_to_ft">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">in_to_ft</span><span class="p">(</span><span class="n">inches</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Convert inches to feet.</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        inches (float): Distance in inches</span>
+<span class="sd">    </span>
+<span class="sd">    Returns:</span>
+<span class="sd">        float: Distance in feet</span>
+<span class="sd">    </span>
+<span class="sd">    Raises:</span>
+<span class="sd">        ValueError: If inches is negative</span>
+<span class="sd">    </span>
+<span class="sd">    Example:</span>
+<span class="sd">        &gt;&gt;&gt; in_to_ft(12)</span>
+<span class="sd">        1.0</span>
+<span class="sd">        &gt;&gt;&gt; in_to_ft(24)</span>
+<span class="sd">        2.0</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_validate_distance</span><span class="p">(</span><span class="n">inches</span><span class="p">,</span> <span class="s2">&quot;inches&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">multiply</span><span class="p">(</span><span class="n">inches</span><span class="p">,</span> <span class="n">IN_TO_FT</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="m_to_ft">
+<a class="viewcode-back" href="../../../api/src.unit_conversions.distance_conversions.html#src.unit_conversions.distance_conversions.m_to_ft">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">m_to_ft</span><span class="p">(</span><span class="n">meters</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Convert meters to feet.</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        meters (float): Distance in meters</span>
+<span class="sd">    </span>
+<span class="sd">    Returns:</span>
+<span class="sd">        float: Distance in feet</span>
+<span class="sd">    </span>
+<span class="sd">    Raises:</span>
+<span class="sd">        ValueError: If meters is negative</span>
+<span class="sd">    </span>
+<span class="sd">    Example:</span>
+<span class="sd">        &gt;&gt;&gt; round(m_to_ft(1), 2)</span>
+<span class="sd">        3.28</span>
+<span class="sd">        &gt;&gt;&gt; round(m_to_ft(10), 2)</span>
+<span class="sd">        32.81</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_validate_distance</span><span class="p">(</span><span class="n">meters</span><span class="p">,</span> <span class="s2">&quot;meters&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">multiply</span><span class="p">(</span><span class="n">meters</span><span class="p">,</span> <span class="n">M_TO_FT</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="ft_to_m">
+<a class="viewcode-back" href="../../../api/src.unit_conversions.distance_conversions.html#src.unit_conversions.distance_conversions.ft_to_m">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">ft_to_m</span><span class="p">(</span><span class="n">feet</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Convert feet to meters.</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        feet (float): Distance in feet</span>
+<span class="sd">    </span>
+<span class="sd">    Returns:</span>
+<span class="sd">        float: Distance in meters</span>
+<span class="sd">    </span>
+<span class="sd">    Raises:</span>
+<span class="sd">        ValueError: If feet is negative</span>
+<span class="sd">    </span>
+<span class="sd">    Example:</span>
+<span class="sd">        &gt;&gt;&gt; round(ft_to_m(1), 2)</span>
+<span class="sd">        0.3</span>
+<span class="sd">        &gt;&gt;&gt; round(ft_to_m(10), 2)</span>
+<span class="sd">        3.05</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_validate_distance</span><span class="p">(</span><span class="n">feet</span><span class="p">,</span> <span class="s2">&quot;feet&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">multiply</span><span class="p">(</span><span class="n">feet</span><span class="p">,</span> <span class="n">FT_TO_M</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="km_to_mi">
+<a class="viewcode-back" href="../../../api/src.unit_conversions.distance_conversions.html#src.unit_conversions.distance_conversions.km_to_mi">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">km_to_mi</span><span class="p">(</span><span class="n">kilometers</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Convert kilometers to miles.</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        kilometers (float): Distance in kilometers</span>
+<span class="sd">    </span>
+<span class="sd">    Returns:</span>
+<span class="sd">        float: Distance in miles</span>
+<span class="sd">    </span>
+<span class="sd">    Raises:</span>
+<span class="sd">        ValueError: If kilometers is negative</span>
+<span class="sd">    </span>
+<span class="sd">    Example:</span>
+<span class="sd">        &gt;&gt;&gt; round(km_to_mi(1), 2)</span>
+<span class="sd">        0.62</span>
+<span class="sd">        &gt;&gt;&gt; round(km_to_mi(10), 2)</span>
+<span class="sd">        6.21</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_validate_distance</span><span class="p">(</span><span class="n">kilometers</span><span class="p">,</span> <span class="s2">&quot;kilometers&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">multiply</span><span class="p">(</span><span class="n">kilometers</span><span class="p">,</span> <span class="n">KM_TO_MI</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="mi_to_km">
+<a class="viewcode-back" href="../../../api/src.unit_conversions.distance_conversions.html#src.unit_conversions.distance_conversions.mi_to_km">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">mi_to_km</span><span class="p">(</span><span class="n">miles</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Convert miles to kilometers.</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        miles (float): Distance in miles</span>
+<span class="sd">    </span>
+<span class="sd">    Returns:</span>
+<span class="sd">        float: Distance in kilometers</span>
+<span class="sd">    </span>
+<span class="sd">    Raises:</span>
+<span class="sd">        ValueError: If miles is negative</span>
+<span class="sd">    </span>
+<span class="sd">    Example:</span>
+<span class="sd">        &gt;&gt;&gt; round(mi_to_km(1), 2)</span>
+<span class="sd">        1.61</span>
+<span class="sd">        &gt;&gt;&gt; round(mi_to_km(10), 2)</span>
+<span class="sd">        16.09</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_validate_distance</span><span class="p">(</span><span class="n">miles</span><span class="p">,</span> <span class="s2">&quot;miles&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">multiply</span><span class="p">(</span><span class="n">miles</span><span class="p">,</span> <span class="n">MI_TO_KM</span><span class="p">)</span></div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright (&#39;2026/01/08&#39;, {&#39;Tyler Chase&#39;}).</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

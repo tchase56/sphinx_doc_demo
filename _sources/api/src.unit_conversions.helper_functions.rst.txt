@@ -1,0 +1,15 @@
+src.unit\_conversions.helper\_functions package
+===============================================
+
+.. automodule:: src.unit_conversions.helper_functions
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   src.unit_conversions.helper_functions.simple_arithmetic

@@ -1,0 +1,24 @@
+src.unit\_conversions package
+=============================
+
+.. automodule:: src.unit_conversions
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   src.unit_conversions.helper_functions
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   src.unit_conversions.distance_conversions
+   src.unit_conversions.weight_conversions
