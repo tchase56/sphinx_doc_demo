@@ -1,21 +1,20 @@
-
-
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" data-content_root="../">
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>src.unit_conversions.weight_conversions module &mdash; sphinx_doc_demo 0.1.0 documentation</title>
-      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
-
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
-      <script src="../_static/jquery.js?v=5d32c60e"></script>
-      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=01f34227"></script>
-      <script src="../_static/doctools.js?v=9a2dae69"></script>
-      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -52,19 +51,7 @@
 <li class="toctree-l5"><a class="reference internal" href="src.unit_conversions.html#subpackages">Subpackages</a></li>
 <li class="toctree-l5 current"><a class="reference internal" href="src.unit_conversions.html#submodules">Submodules</a><ul class="current">
 <li class="toctree-l6"><a class="reference internal" href="src.unit_conversions.distance_conversions.html">src.unit_conversions.distance_conversions module</a></li>
-<li class="toctree-l6 current"><a class="current reference internal" href="#">src.unit_conversions.weight_conversions module</a><ul>
-<li class="toctree-l7"><a class="reference internal" href="#src.unit_conversions.weight_conversions.g_to_kg"><code class="docutils literal notranslate"><span class="pre">g_to_kg()</span></code></a></li>
-<li class="toctree-l7"><a class="reference internal" href="#src.unit_conversions.weight_conversions.g_to_mg"><code class="docutils literal notranslate"><span class="pre">g_to_mg()</span></code></a></li>
-<li class="toctree-l7"><a class="reference internal" href="#src.unit_conversions.weight_conversions.g_to_oz"><code class="docutils literal notranslate"><span class="pre">g_to_oz()</span></code></a></li>
-<li class="toctree-l7"><a class="reference internal" href="#src.unit_conversions.weight_conversions.kg_to_g"><code class="docutils literal notranslate"><span class="pre">kg_to_g()</span></code></a></li>
-<li class="toctree-l7"><a class="reference internal" href="#src.unit_conversions.weight_conversions.kg_to_lb"><code class="docutils literal notranslate"><span class="pre">kg_to_lb()</span></code></a></li>
-<li class="toctree-l7"><a class="reference internal" href="#src.unit_conversions.weight_conversions.lb_to_kg"><code class="docutils literal notranslate"><span class="pre">lb_to_kg()</span></code></a></li>
-<li class="toctree-l7"><a class="reference internal" href="#src.unit_conversions.weight_conversions.lb_to_oz"><code class="docutils literal notranslate"><span class="pre">lb_to_oz()</span></code></a></li>
-<li class="toctree-l7"><a class="reference internal" href="#src.unit_conversions.weight_conversions.mg_to_g"><code class="docutils literal notranslate"><span class="pre">mg_to_g()</span></code></a></li>
-<li class="toctree-l7"><a class="reference internal" href="#src.unit_conversions.weight_conversions.oz_to_g"><code class="docutils literal notranslate"><span class="pre">oz_to_g()</span></code></a></li>
-<li class="toctree-l7"><a class="reference internal" href="#src.unit_conversions.weight_conversions.oz_to_lb"><code class="docutils literal notranslate"><span class="pre">oz_to_lb()</span></code></a></li>
-</ul>
-</li>
+<li class="toctree-l6 current"><a class="current reference internal" href="#">src.unit_conversions.weight_conversions module</a></li>
 </ul>
 </li>
 </ul>
@@ -106,25 +93,25 @@
            <div itemprop="articleBody">
              
   <section id="module-src.unit_conversions.weight_conversions">
-<span id="src-unit-conversions-weight-conversions-module"></span><h1>src.unit_conversions.weight_conversions module<a class="headerlink" href="#module-src.unit_conversions.weight_conversions" title="Link to this heading"></a></h1>
+<span id="src-unit-conversions-weight-conversions-module"></span><h1>src.unit_conversions.weight_conversions module<a class="headerlink" href="#module-src.unit_conversions.weight_conversions" title="Permalink to this headline"></a></h1>
 <p>Weight Conversion Module</p>
 <p>This module provides functions for converting between common weight units.
 All conversions use helper functions from simple_arithmetic for calculations.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="src.unit_conversions.weight_conversions.g_to_kg">
-<span class="sig-prename descclassname"><span class="pre">src.unit_conversions.weight_conversions.</span></span><span class="sig-name descname"><span class="pre">g_to_kg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/src/unit_conversions/weight_conversions.html#g_to_kg"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.unit_conversions.weight_conversions.g_to_kg" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.unit_conversions.weight_conversions.</span></span><span class="sig-name descname"><span class="pre">g_to_kg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/src/unit_conversions/weight_conversions.html#g_to_kg"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.unit_conversions.weight_conversions.g_to_kg" title="Permalink to this definition"></a></dt>
 <dd><p>Convert grams to kilograms.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>grams</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – Weight in grams</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Weight in kilograms</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)">float</a></p>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dt class="field-even">Raises</dt>
 <dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.14)"><strong>ValueError</strong></a> – If grams is negative</p>
 </dd>
 </dl>
@@ -139,19 +126,19 @@ All conversions use helper functions from simple_arithmetic for calculations.</p
 
 <dl class="py function">
 <dt class="sig sig-object py" id="src.unit_conversions.weight_conversions.g_to_mg">
-<span class="sig-prename descclassname"><span class="pre">src.unit_conversions.weight_conversions.</span></span><span class="sig-name descname"><span class="pre">g_to_mg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/src/unit_conversions/weight_conversions.html#g_to_mg"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.unit_conversions.weight_conversions.g_to_mg" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.unit_conversions.weight_conversions.</span></span><span class="sig-name descname"><span class="pre">g_to_mg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/src/unit_conversions/weight_conversions.html#g_to_mg"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.unit_conversions.weight_conversions.g_to_mg" title="Permalink to this definition"></a></dt>
 <dd><p>Convert grams to milligrams.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>grams</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – Weight in grams</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Weight in milligrams</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)">float</a></p>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dt class="field-even">Raises</dt>
 <dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.14)"><strong>ValueError</strong></a> – If grams is negative</p>
 </dd>
 </dl>
@@ -166,19 +153,19 @@ All conversions use helper functions from simple_arithmetic for calculations.</p
 
 <dl class="py function">
 <dt class="sig sig-object py" id="src.unit_conversions.weight_conversions.g_to_oz">
-<span class="sig-prename descclassname"><span class="pre">src.unit_conversions.weight_conversions.</span></span><span class="sig-name descname"><span class="pre">g_to_oz</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/src/unit_conversions/weight_conversions.html#g_to_oz"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.unit_conversions.weight_conversions.g_to_oz" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.unit_conversions.weight_conversions.</span></span><span class="sig-name descname"><span class="pre">g_to_oz</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/src/unit_conversions/weight_conversions.html#g_to_oz"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.unit_conversions.weight_conversions.g_to_oz" title="Permalink to this definition"></a></dt>
 <dd><p>Convert grams to ounces.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>grams</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – Weight in grams</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Weight in ounces</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)">float</a></p>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dt class="field-even">Raises</dt>
 <dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.14)"><strong>ValueError</strong></a> – If grams is negative</p>
 </dd>
 </dl>
@@ -193,19 +180,19 @@ All conversions use helper functions from simple_arithmetic for calculations.</p
 
 <dl class="py function">
 <dt class="sig sig-object py" id="src.unit_conversions.weight_conversions.kg_to_g">
-<span class="sig-prename descclassname"><span class="pre">src.unit_conversions.weight_conversions.</span></span><span class="sig-name descname"><span class="pre">kg_to_g</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kilograms</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/src/unit_conversions/weight_conversions.html#kg_to_g"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.unit_conversions.weight_conversions.kg_to_g" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.unit_conversions.weight_conversions.</span></span><span class="sig-name descname"><span class="pre">kg_to_g</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kilograms</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/src/unit_conversions/weight_conversions.html#kg_to_g"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.unit_conversions.weight_conversions.kg_to_g" title="Permalink to this definition"></a></dt>
 <dd><p>Convert kilograms to grams.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>kilograms</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – Weight in kilograms</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Weight in grams</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)">float</a></p>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dt class="field-even">Raises</dt>
 <dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.14)"><strong>ValueError</strong></a> – If kilograms is negative</p>
 </dd>
 </dl>
@@ -220,19 +207,19 @@ All conversions use helper functions from simple_arithmetic for calculations.</p
 
 <dl class="py function">
 <dt class="sig sig-object py" id="src.unit_conversions.weight_conversions.kg_to_lb">
-<span class="sig-prename descclassname"><span class="pre">src.unit_conversions.weight_conversions.</span></span><span class="sig-name descname"><span class="pre">kg_to_lb</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kilograms</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/src/unit_conversions/weight_conversions.html#kg_to_lb"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.unit_conversions.weight_conversions.kg_to_lb" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.unit_conversions.weight_conversions.</span></span><span class="sig-name descname"><span class="pre">kg_to_lb</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kilograms</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/src/unit_conversions/weight_conversions.html#kg_to_lb"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.unit_conversions.weight_conversions.kg_to_lb" title="Permalink to this definition"></a></dt>
 <dd><p>Convert kilograms to pounds.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>kilograms</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – Weight in kilograms</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Weight in pounds</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)">float</a></p>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dt class="field-even">Raises</dt>
 <dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.14)"><strong>ValueError</strong></a> – If kilograms is negative</p>
 </dd>
 </dl>
@@ -247,19 +234,19 @@ All conversions use helper functions from simple_arithmetic for calculations.</p
 
 <dl class="py function">
 <dt class="sig sig-object py" id="src.unit_conversions.weight_conversions.lb_to_kg">
-<span class="sig-prename descclassname"><span class="pre">src.unit_conversions.weight_conversions.</span></span><span class="sig-name descname"><span class="pre">lb_to_kg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pounds</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/src/unit_conversions/weight_conversions.html#lb_to_kg"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.unit_conversions.weight_conversions.lb_to_kg" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.unit_conversions.weight_conversions.</span></span><span class="sig-name descname"><span class="pre">lb_to_kg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pounds</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/src/unit_conversions/weight_conversions.html#lb_to_kg"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.unit_conversions.weight_conversions.lb_to_kg" title="Permalink to this definition"></a></dt>
 <dd><p>Convert pounds to kilograms.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>pounds</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – Weight in pounds</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Weight in kilograms</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)">float</a></p>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dt class="field-even">Raises</dt>
 <dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.14)"><strong>ValueError</strong></a> – If pounds is negative</p>
 </dd>
 </dl>
@@ -274,19 +261,19 @@ All conversions use helper functions from simple_arithmetic for calculations.</p
 
 <dl class="py function">
 <dt class="sig sig-object py" id="src.unit_conversions.weight_conversions.lb_to_oz">
-<span class="sig-prename descclassname"><span class="pre">src.unit_conversions.weight_conversions.</span></span><span class="sig-name descname"><span class="pre">lb_to_oz</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pounds</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/src/unit_conversions/weight_conversions.html#lb_to_oz"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.unit_conversions.weight_conversions.lb_to_oz" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.unit_conversions.weight_conversions.</span></span><span class="sig-name descname"><span class="pre">lb_to_oz</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pounds</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/src/unit_conversions/weight_conversions.html#lb_to_oz"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.unit_conversions.weight_conversions.lb_to_oz" title="Permalink to this definition"></a></dt>
 <dd><p>Convert pounds to ounces.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>pounds</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – Weight in pounds</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Weight in ounces</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)">float</a></p>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dt class="field-even">Raises</dt>
 <dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.14)"><strong>ValueError</strong></a> – If pounds is negative</p>
 </dd>
 </dl>
@@ -301,19 +288,19 @@ All conversions use helper functions from simple_arithmetic for calculations.</p
 
 <dl class="py function">
 <dt class="sig sig-object py" id="src.unit_conversions.weight_conversions.mg_to_g">
-<span class="sig-prename descclassname"><span class="pre">src.unit_conversions.weight_conversions.</span></span><span class="sig-name descname"><span class="pre">mg_to_g</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">milligrams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/src/unit_conversions/weight_conversions.html#mg_to_g"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.unit_conversions.weight_conversions.mg_to_g" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.unit_conversions.weight_conversions.</span></span><span class="sig-name descname"><span class="pre">mg_to_g</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">milligrams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/src/unit_conversions/weight_conversions.html#mg_to_g"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.unit_conversions.weight_conversions.mg_to_g" title="Permalink to this definition"></a></dt>
 <dd><p>Convert milligrams to grams.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>milligrams</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – Weight in milligrams</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Weight in grams</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)">float</a></p>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dt class="field-even">Raises</dt>
 <dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.14)"><strong>ValueError</strong></a> – If milligrams is negative</p>
 </dd>
 </dl>
@@ -328,19 +315,19 @@ All conversions use helper functions from simple_arithmetic for calculations.</p
 
 <dl class="py function">
 <dt class="sig sig-object py" id="src.unit_conversions.weight_conversions.oz_to_g">
-<span class="sig-prename descclassname"><span class="pre">src.unit_conversions.weight_conversions.</span></span><span class="sig-name descname"><span class="pre">oz_to_g</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ounces</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/src/unit_conversions/weight_conversions.html#oz_to_g"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.unit_conversions.weight_conversions.oz_to_g" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.unit_conversions.weight_conversions.</span></span><span class="sig-name descname"><span class="pre">oz_to_g</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ounces</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/src/unit_conversions/weight_conversions.html#oz_to_g"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.unit_conversions.weight_conversions.oz_to_g" title="Permalink to this definition"></a></dt>
 <dd><p>Convert ounces to grams.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>ounces</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – Weight in ounces</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Weight in grams</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)">float</a></p>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dt class="field-even">Raises</dt>
 <dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.14)"><strong>ValueError</strong></a> – If ounces is negative</p>
 </dd>
 </dl>
@@ -355,19 +342,19 @@ All conversions use helper functions from simple_arithmetic for calculations.</p
 
 <dl class="py function">
 <dt class="sig sig-object py" id="src.unit_conversions.weight_conversions.oz_to_lb">
-<span class="sig-prename descclassname"><span class="pre">src.unit_conversions.weight_conversions.</span></span><span class="sig-name descname"><span class="pre">oz_to_lb</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ounces</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/src/unit_conversions/weight_conversions.html#oz_to_lb"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.unit_conversions.weight_conversions.oz_to_lb" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.unit_conversions.weight_conversions.</span></span><span class="sig-name descname"><span class="pre">oz_to_lb</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ounces</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/src/unit_conversions/weight_conversions.html#oz_to_lb"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.unit_conversions.weight_conversions.oz_to_lb" title="Permalink to this definition"></a></dt>
 <dd><p>Convert ounces to pounds.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>ounces</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – Weight in ounces</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Weight in pounds</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)">float</a></p>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dt class="field-even">Raises</dt>
 <dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.14)"><strong>ValueError</strong></a> – If ounces is negative</p>
 </dd>
 </dl>

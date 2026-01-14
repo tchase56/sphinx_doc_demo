@@ -1,21 +1,20 @@
-
-
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" data-content_root="../">
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>src.unit_conversions.distance_conversions module &mdash; sphinx_doc_demo 0.1.0 documentation</title>
-      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
-
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
-      <script src="../_static/jquery.js?v=5d32c60e"></script>
-      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=01f34227"></script>
-      <script src="../_static/doctools.js?v=9a2dae69"></script>
-      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -51,21 +50,7 @@
 <li class="toctree-l4 current"><a class="reference internal" href="src.unit_conversions.html">src.unit_conversions package</a><ul class="current">
 <li class="toctree-l5"><a class="reference internal" href="src.unit_conversions.html#subpackages">Subpackages</a></li>
 <li class="toctree-l5 current"><a class="reference internal" href="src.unit_conversions.html#submodules">Submodules</a><ul class="current">
-<li class="toctree-l6 current"><a class="current reference internal" href="#">src.unit_conversions.distance_conversions module</a><ul>
-<li class="toctree-l7"><a class="reference internal" href="#src.unit_conversions.distance_conversions.cm_to_m"><code class="docutils literal notranslate"><span class="pre">cm_to_m()</span></code></a></li>
-<li class="toctree-l7"><a class="reference internal" href="#src.unit_conversions.distance_conversions.ft_to_in"><code class="docutils literal notranslate"><span class="pre">ft_to_in()</span></code></a></li>
-<li class="toctree-l7"><a class="reference internal" href="#src.unit_conversions.distance_conversions.ft_to_m"><code class="docutils literal notranslate"><span class="pre">ft_to_m()</span></code></a></li>
-<li class="toctree-l7"><a class="reference internal" href="#src.unit_conversions.distance_conversions.ft_to_mi"><code class="docutils literal notranslate"><span class="pre">ft_to_mi()</span></code></a></li>
-<li class="toctree-l7"><a class="reference internal" href="#src.unit_conversions.distance_conversions.in_to_ft"><code class="docutils literal notranslate"><span class="pre">in_to_ft()</span></code></a></li>
-<li class="toctree-l7"><a class="reference internal" href="#src.unit_conversions.distance_conversions.km_to_m"><code class="docutils literal notranslate"><span class="pre">km_to_m()</span></code></a></li>
-<li class="toctree-l7"><a class="reference internal" href="#src.unit_conversions.distance_conversions.km_to_mi"><code class="docutils literal notranslate"><span class="pre">km_to_mi()</span></code></a></li>
-<li class="toctree-l7"><a class="reference internal" href="#src.unit_conversions.distance_conversions.m_to_cm"><code class="docutils literal notranslate"><span class="pre">m_to_cm()</span></code></a></li>
-<li class="toctree-l7"><a class="reference internal" href="#src.unit_conversions.distance_conversions.m_to_ft"><code class="docutils literal notranslate"><span class="pre">m_to_ft()</span></code></a></li>
-<li class="toctree-l7"><a class="reference internal" href="#src.unit_conversions.distance_conversions.m_to_km"><code class="docutils literal notranslate"><span class="pre">m_to_km()</span></code></a></li>
-<li class="toctree-l7"><a class="reference internal" href="#src.unit_conversions.distance_conversions.mi_to_ft"><code class="docutils literal notranslate"><span class="pre">mi_to_ft()</span></code></a></li>
-<li class="toctree-l7"><a class="reference internal" href="#src.unit_conversions.distance_conversions.mi_to_km"><code class="docutils literal notranslate"><span class="pre">mi_to_km()</span></code></a></li>
-</ul>
-</li>
+<li class="toctree-l6 current"><a class="current reference internal" href="#">src.unit_conversions.distance_conversions module</a></li>
 <li class="toctree-l6"><a class="reference internal" href="src.unit_conversions.weight_conversions.html">src.unit_conversions.weight_conversions module</a></li>
 </ul>
 </li>
@@ -108,25 +93,25 @@
            <div itemprop="articleBody">
              
   <section id="module-src.unit_conversions.distance_conversions">
-<span id="src-unit-conversions-distance-conversions-module"></span><h1>src.unit_conversions.distance_conversions module<a class="headerlink" href="#module-src.unit_conversions.distance_conversions" title="Link to this heading"></a></h1>
+<span id="src-unit-conversions-distance-conversions-module"></span><h1>src.unit_conversions.distance_conversions module<a class="headerlink" href="#module-src.unit_conversions.distance_conversions" title="Permalink to this headline"></a></h1>
 <p>Distance Conversion Module</p>
 <p>This module provides functions for converting between common distance units.
 All conversions use helper functions from simple_arithmetic for calculations.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="src.unit_conversions.distance_conversions.cm_to_m">
-<span class="sig-prename descclassname"><span class="pre">src.unit_conversions.distance_conversions.</span></span><span class="sig-name descname"><span class="pre">cm_to_m</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">centimeters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/src/unit_conversions/distance_conversions.html#cm_to_m"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.unit_conversions.distance_conversions.cm_to_m" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.unit_conversions.distance_conversions.</span></span><span class="sig-name descname"><span class="pre">cm_to_m</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">centimeters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/src/unit_conversions/distance_conversions.html#cm_to_m"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.unit_conversions.distance_conversions.cm_to_m" title="Permalink to this definition"></a></dt>
 <dd><p>Convert centimeters to meters.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>centimeters</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – Distance in centimeters</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Distance in meters</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)">float</a></p>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dt class="field-even">Raises</dt>
 <dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.14)"><strong>ValueError</strong></a> – If centimeters is negative</p>
 </dd>
 </dl>
@@ -141,19 +126,19 @@ All conversions use helper functions from simple_arithmetic for calculations.</p
 
 <dl class="py function">
 <dt class="sig sig-object py" id="src.unit_conversions.distance_conversions.ft_to_in">
-<span class="sig-prename descclassname"><span class="pre">src.unit_conversions.distance_conversions.</span></span><span class="sig-name descname"><span class="pre">ft_to_in</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">feet</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/src/unit_conversions/distance_conversions.html#ft_to_in"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.unit_conversions.distance_conversions.ft_to_in" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.unit_conversions.distance_conversions.</span></span><span class="sig-name descname"><span class="pre">ft_to_in</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">feet</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/src/unit_conversions/distance_conversions.html#ft_to_in"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.unit_conversions.distance_conversions.ft_to_in" title="Permalink to this definition"></a></dt>
 <dd><p>Convert feet to inches.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>feet</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – Distance in feet</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Distance in inches</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)">float</a></p>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dt class="field-even">Raises</dt>
 <dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.14)"><strong>ValueError</strong></a> – If feet is negative</p>
 </dd>
 </dl>
@@ -168,19 +153,19 @@ All conversions use helper functions from simple_arithmetic for calculations.</p
 
 <dl class="py function">
 <dt class="sig sig-object py" id="src.unit_conversions.distance_conversions.ft_to_m">
-<span class="sig-prename descclassname"><span class="pre">src.unit_conversions.distance_conversions.</span></span><span class="sig-name descname"><span class="pre">ft_to_m</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">feet</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/src/unit_conversions/distance_conversions.html#ft_to_m"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.unit_conversions.distance_conversions.ft_to_m" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.unit_conversions.distance_conversions.</span></span><span class="sig-name descname"><span class="pre">ft_to_m</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">feet</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/src/unit_conversions/distance_conversions.html#ft_to_m"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.unit_conversions.distance_conversions.ft_to_m" title="Permalink to this definition"></a></dt>
 <dd><p>Convert feet to meters.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>feet</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – Distance in feet</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Distance in meters</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)">float</a></p>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dt class="field-even">Raises</dt>
 <dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.14)"><strong>ValueError</strong></a> – If feet is negative</p>
 </dd>
 </dl>
@@ -195,19 +180,19 @@ All conversions use helper functions from simple_arithmetic for calculations.</p
 
 <dl class="py function">
 <dt class="sig sig-object py" id="src.unit_conversions.distance_conversions.ft_to_mi">
-<span class="sig-prename descclassname"><span class="pre">src.unit_conversions.distance_conversions.</span></span><span class="sig-name descname"><span class="pre">ft_to_mi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">feet</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/src/unit_conversions/distance_conversions.html#ft_to_mi"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.unit_conversions.distance_conversions.ft_to_mi" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.unit_conversions.distance_conversions.</span></span><span class="sig-name descname"><span class="pre">ft_to_mi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">feet</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/src/unit_conversions/distance_conversions.html#ft_to_mi"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.unit_conversions.distance_conversions.ft_to_mi" title="Permalink to this definition"></a></dt>
 <dd><p>Convert feet to miles.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>feet</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – Distance in feet</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Distance in miles</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)">float</a></p>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dt class="field-even">Raises</dt>
 <dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.14)"><strong>ValueError</strong></a> – If feet is negative</p>
 </dd>
 </dl>
@@ -222,19 +207,19 @@ All conversions use helper functions from simple_arithmetic for calculations.</p
 
 <dl class="py function">
 <dt class="sig sig-object py" id="src.unit_conversions.distance_conversions.in_to_ft">
-<span class="sig-prename descclassname"><span class="pre">src.unit_conversions.distance_conversions.</span></span><span class="sig-name descname"><span class="pre">in_to_ft</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inches</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/src/unit_conversions/distance_conversions.html#in_to_ft"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.unit_conversions.distance_conversions.in_to_ft" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.unit_conversions.distance_conversions.</span></span><span class="sig-name descname"><span class="pre">in_to_ft</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inches</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/src/unit_conversions/distance_conversions.html#in_to_ft"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.unit_conversions.distance_conversions.in_to_ft" title="Permalink to this definition"></a></dt>
 <dd><p>Convert inches to feet.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>inches</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – Distance in inches</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Distance in feet</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)">float</a></p>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dt class="field-even">Raises</dt>
 <dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.14)"><strong>ValueError</strong></a> – If inches is negative</p>
 </dd>
 </dl>
@@ -249,19 +234,19 @@ All conversions use helper functions from simple_arithmetic for calculations.</p
 
 <dl class="py function">
 <dt class="sig sig-object py" id="src.unit_conversions.distance_conversions.km_to_m">
-<span class="sig-prename descclassname"><span class="pre">src.unit_conversions.distance_conversions.</span></span><span class="sig-name descname"><span class="pre">km_to_m</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kilometers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/src/unit_conversions/distance_conversions.html#km_to_m"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.unit_conversions.distance_conversions.km_to_m" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.unit_conversions.distance_conversions.</span></span><span class="sig-name descname"><span class="pre">km_to_m</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kilometers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/src/unit_conversions/distance_conversions.html#km_to_m"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.unit_conversions.distance_conversions.km_to_m" title="Permalink to this definition"></a></dt>
 <dd><p>Convert kilometers to meters.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>kilometers</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – Distance in kilometers</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Distance in meters</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)">float</a></p>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dt class="field-even">Raises</dt>
 <dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.14)"><strong>ValueError</strong></a> – If kilometers is negative</p>
 </dd>
 </dl>
@@ -276,19 +261,19 @@ All conversions use helper functions from simple_arithmetic for calculations.</p
 
 <dl class="py function">
 <dt class="sig sig-object py" id="src.unit_conversions.distance_conversions.km_to_mi">
-<span class="sig-prename descclassname"><span class="pre">src.unit_conversions.distance_conversions.</span></span><span class="sig-name descname"><span class="pre">km_to_mi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kilometers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/src/unit_conversions/distance_conversions.html#km_to_mi"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.unit_conversions.distance_conversions.km_to_mi" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.unit_conversions.distance_conversions.</span></span><span class="sig-name descname"><span class="pre">km_to_mi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kilometers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/src/unit_conversions/distance_conversions.html#km_to_mi"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.unit_conversions.distance_conversions.km_to_mi" title="Permalink to this definition"></a></dt>
 <dd><p>Convert kilometers to miles.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>kilometers</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – Distance in kilometers</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Distance in miles</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)">float</a></p>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dt class="field-even">Raises</dt>
 <dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.14)"><strong>ValueError</strong></a> – If kilometers is negative</p>
 </dd>
 </dl>
@@ -303,19 +288,19 @@ All conversions use helper functions from simple_arithmetic for calculations.</p
 
 <dl class="py function">
 <dt class="sig sig-object py" id="src.unit_conversions.distance_conversions.m_to_cm">
-<span class="sig-prename descclassname"><span class="pre">src.unit_conversions.distance_conversions.</span></span><span class="sig-name descname"><span class="pre">m_to_cm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">meters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/src/unit_conversions/distance_conversions.html#m_to_cm"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.unit_conversions.distance_conversions.m_to_cm" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.unit_conversions.distance_conversions.</span></span><span class="sig-name descname"><span class="pre">m_to_cm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">meters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/src/unit_conversions/distance_conversions.html#m_to_cm"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.unit_conversions.distance_conversions.m_to_cm" title="Permalink to this definition"></a></dt>
 <dd><p>Convert meters to centimeters.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>meters</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – Distance in meters</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Distance in centimeters</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)">float</a></p>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dt class="field-even">Raises</dt>
 <dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.14)"><strong>ValueError</strong></a> – If meters is negative</p>
 </dd>
 </dl>
@@ -330,19 +315,19 @@ All conversions use helper functions from simple_arithmetic for calculations.</p
 
 <dl class="py function">
 <dt class="sig sig-object py" id="src.unit_conversions.distance_conversions.m_to_ft">
-<span class="sig-prename descclassname"><span class="pre">src.unit_conversions.distance_conversions.</span></span><span class="sig-name descname"><span class="pre">m_to_ft</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">meters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/src/unit_conversions/distance_conversions.html#m_to_ft"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.unit_conversions.distance_conversions.m_to_ft" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.unit_conversions.distance_conversions.</span></span><span class="sig-name descname"><span class="pre">m_to_ft</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">meters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/src/unit_conversions/distance_conversions.html#m_to_ft"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.unit_conversions.distance_conversions.m_to_ft" title="Permalink to this definition"></a></dt>
 <dd><p>Convert meters to feet.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>meters</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – Distance in meters</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Distance in feet</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)">float</a></p>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dt class="field-even">Raises</dt>
 <dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.14)"><strong>ValueError</strong></a> – If meters is negative</p>
 </dd>
 </dl>
@@ -357,19 +342,19 @@ All conversions use helper functions from simple_arithmetic for calculations.</p
 
 <dl class="py function">
 <dt class="sig sig-object py" id="src.unit_conversions.distance_conversions.m_to_km">
-<span class="sig-prename descclassname"><span class="pre">src.unit_conversions.distance_conversions.</span></span><span class="sig-name descname"><span class="pre">m_to_km</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">meters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/src/unit_conversions/distance_conversions.html#m_to_km"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.unit_conversions.distance_conversions.m_to_km" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.unit_conversions.distance_conversions.</span></span><span class="sig-name descname"><span class="pre">m_to_km</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">meters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/src/unit_conversions/distance_conversions.html#m_to_km"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.unit_conversions.distance_conversions.m_to_km" title="Permalink to this definition"></a></dt>
 <dd><p>Convert meters to kilometers.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>meters</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – Distance in meters</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Distance in kilometers</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)">float</a></p>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dt class="field-even">Raises</dt>
 <dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.14)"><strong>ValueError</strong></a> – If meters is negative</p>
 </dd>
 </dl>
@@ -384,19 +369,19 @@ All conversions use helper functions from simple_arithmetic for calculations.</p
 
 <dl class="py function">
 <dt class="sig sig-object py" id="src.unit_conversions.distance_conversions.mi_to_ft">
-<span class="sig-prename descclassname"><span class="pre">src.unit_conversions.distance_conversions.</span></span><span class="sig-name descname"><span class="pre">mi_to_ft</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">miles</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/src/unit_conversions/distance_conversions.html#mi_to_ft"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.unit_conversions.distance_conversions.mi_to_ft" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.unit_conversions.distance_conversions.</span></span><span class="sig-name descname"><span class="pre">mi_to_ft</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">miles</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/src/unit_conversions/distance_conversions.html#mi_to_ft"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.unit_conversions.distance_conversions.mi_to_ft" title="Permalink to this definition"></a></dt>
 <dd><p>Convert miles to feet.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>miles</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – Distance in miles</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Distance in feet</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)">float</a></p>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dt class="field-even">Raises</dt>
 <dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.14)"><strong>ValueError</strong></a> – If miles is negative</p>
 </dd>
 </dl>
@@ -411,19 +396,19 @@ All conversions use helper functions from simple_arithmetic for calculations.</p
 
 <dl class="py function">
 <dt class="sig sig-object py" id="src.unit_conversions.distance_conversions.mi_to_km">
-<span class="sig-prename descclassname"><span class="pre">src.unit_conversions.distance_conversions.</span></span><span class="sig-name descname"><span class="pre">mi_to_km</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">miles</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/src/unit_conversions/distance_conversions.html#mi_to_km"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.unit_conversions.distance_conversions.mi_to_km" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.unit_conversions.distance_conversions.</span></span><span class="sig-name descname"><span class="pre">mi_to_km</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">miles</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/src/unit_conversions/distance_conversions.html#mi_to_km"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.unit_conversions.distance_conversions.mi_to_km" title="Permalink to this definition"></a></dt>
 <dd><p>Convert miles to kilometers.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>miles</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – Distance in miles</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Distance in kilometers</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)">float</a></p>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dt class="field-even">Raises</dt>
 <dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.14)"><strong>ValueError</strong></a> – If miles is negative</p>
 </dd>
 </dl>

@@ -1,20 +1,19 @@
-
-
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" data-content_root="../../../">
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>src.unit_conversions.weight_conversions &mdash; sphinx_doc_demo 0.1.0 documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
-
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
-      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
-      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../../_static/documentation_options.js?v=01f34227"></script>
-      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
-      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -77,7 +76,7 @@
 <span class="sd">All conversions use helper functions from simple_arithmetic for calculations.</span>
 <span class="sd">&quot;&quot;&quot;</span>
 
-<span class="kn">from</span><span class="w"> </span><span class="nn">.helper_functions.simple_arithmetic</span><span class="w"> </span><span class="kn">import</span> <span class="n">multiply</span>
+<span class="kn">from</span> <span class="nn">.helper_functions.simple_arithmetic</span> <span class="kn">import</span> <span class="n">multiply</span>
 
 
 <span class="c1"># Conversion factors</span>
@@ -93,7 +92,7 @@
 <span class="n">OZ_TO_G</span> <span class="o">=</span> <span class="mf">28.3495</span>
 
 
-<span class="k">def</span><span class="w"> </span><span class="nf">_validate_weight</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">unit</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="k">def</span> <span class="nf">_validate_weight</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">unit</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Validate that a weight value is non-negative.</span>
 <span class="sd">    </span>
@@ -108,9 +107,7 @@
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Weight in </span><span class="si">{</span><span class="n">unit</span><span class="si">}</span><span class="s2"> cannot be negative: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="kg_to_g">
-<a class="viewcode-back" href="../../../api/src.unit_conversions.weight_conversions.html#src.unit_conversions.weight_conversions.kg_to_g">[docs]</a>
-<span class="k">def</span><span class="w"> </span><span class="nf">kg_to_g</span><span class="p">(</span><span class="n">kilograms</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<div class="viewcode-block" id="kg_to_g"><a class="viewcode-back" href="../../../api/src.unit_conversions.weight_conversions.html#src.unit_conversions.weight_conversions.kg_to_g">[docs]</a><span class="k">def</span> <span class="nf">kg_to_g</span><span class="p">(</span><span class="n">kilograms</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Convert kilograms to grams.</span>
 <span class="sd">    </span>
@@ -133,10 +130,7 @@
     <span class="k">return</span> <span class="n">multiply</span><span class="p">(</span><span class="n">kilograms</span><span class="p">,</span> <span class="n">KG_TO_G</span><span class="p">)</span></div>
 
 
-
-<div class="viewcode-block" id="g_to_kg">
-<a class="viewcode-back" href="../../../api/src.unit_conversions.weight_conversions.html#src.unit_conversions.weight_conversions.g_to_kg">[docs]</a>
-<span class="k">def</span><span class="w"> </span><span class="nf">g_to_kg</span><span class="p">(</span><span class="n">grams</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<div class="viewcode-block" id="g_to_kg"><a class="viewcode-back" href="../../../api/src.unit_conversions.weight_conversions.html#src.unit_conversions.weight_conversions.g_to_kg">[docs]</a><span class="k">def</span> <span class="nf">g_to_kg</span><span class="p">(</span><span class="n">grams</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Convert grams to kilograms.</span>
 <span class="sd">    </span>
@@ -159,10 +153,7 @@
     <span class="k">return</span> <span class="n">multiply</span><span class="p">(</span><span class="n">grams</span><span class="p">,</span> <span class="n">G_TO_KG</span><span class="p">)</span></div>
 
 
-
-<div class="viewcode-block" id="g_to_mg">
-<a class="viewcode-back" href="../../../api/src.unit_conversions.weight_conversions.html#src.unit_conversions.weight_conversions.g_to_mg">[docs]</a>
-<span class="k">def</span><span class="w"> </span><span class="nf">g_to_mg</span><span class="p">(</span><span class="n">grams</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<div class="viewcode-block" id="g_to_mg"><a class="viewcode-back" href="../../../api/src.unit_conversions.weight_conversions.html#src.unit_conversions.weight_conversions.g_to_mg">[docs]</a><span class="k">def</span> <span class="nf">g_to_mg</span><span class="p">(</span><span class="n">grams</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Convert grams to milligrams.</span>
 <span class="sd">    </span>
@@ -185,10 +176,7 @@
     <span class="k">return</span> <span class="n">multiply</span><span class="p">(</span><span class="n">grams</span><span class="p">,</span> <span class="n">G_TO_MG</span><span class="p">)</span></div>
 
 
-
-<div class="viewcode-block" id="mg_to_g">
-<a class="viewcode-back" href="../../../api/src.unit_conversions.weight_conversions.html#src.unit_conversions.weight_conversions.mg_to_g">[docs]</a>
-<span class="k">def</span><span class="w"> </span><span class="nf">mg_to_g</span><span class="p">(</span><span class="n">milligrams</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<div class="viewcode-block" id="mg_to_g"><a class="viewcode-back" href="../../../api/src.unit_conversions.weight_conversions.html#src.unit_conversions.weight_conversions.mg_to_g">[docs]</a><span class="k">def</span> <span class="nf">mg_to_g</span><span class="p">(</span><span class="n">milligrams</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Convert milligrams to grams.</span>
 <span class="sd">    </span>
@@ -211,10 +199,7 @@
     <span class="k">return</span> <span class="n">multiply</span><span class="p">(</span><span class="n">milligrams</span><span class="p">,</span> <span class="n">MG_TO_G</span><span class="p">)</span></div>
 
 
-
-<div class="viewcode-block" id="lb_to_oz">
-<a class="viewcode-back" href="../../../api/src.unit_conversions.weight_conversions.html#src.unit_conversions.weight_conversions.lb_to_oz">[docs]</a>
-<span class="k">def</span><span class="w"> </span><span class="nf">lb_to_oz</span><span class="p">(</span><span class="n">pounds</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<div class="viewcode-block" id="lb_to_oz"><a class="viewcode-back" href="../../../api/src.unit_conversions.weight_conversions.html#src.unit_conversions.weight_conversions.lb_to_oz">[docs]</a><span class="k">def</span> <span class="nf">lb_to_oz</span><span class="p">(</span><span class="n">pounds</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Convert pounds to ounces.</span>
 <span class="sd">    </span>
@@ -237,10 +222,7 @@
     <span class="k">return</span> <span class="n">multiply</span><span class="p">(</span><span class="n">pounds</span><span class="p">,</span> <span class="n">LB_TO_OZ</span><span class="p">)</span></div>
 
 
-
-<div class="viewcode-block" id="oz_to_lb">
-<a class="viewcode-back" href="../../../api/src.unit_conversions.weight_conversions.html#src.unit_conversions.weight_conversions.oz_to_lb">[docs]</a>
-<span class="k">def</span><span class="w"> </span><span class="nf">oz_to_lb</span><span class="p">(</span><span class="n">ounces</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<div class="viewcode-block" id="oz_to_lb"><a class="viewcode-back" href="../../../api/src.unit_conversions.weight_conversions.html#src.unit_conversions.weight_conversions.oz_to_lb">[docs]</a><span class="k">def</span> <span class="nf">oz_to_lb</span><span class="p">(</span><span class="n">ounces</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Convert ounces to pounds.</span>
 <span class="sd">    </span>
@@ -263,10 +245,7 @@
     <span class="k">return</span> <span class="n">multiply</span><span class="p">(</span><span class="n">ounces</span><span class="p">,</span> <span class="n">OZ_TO_LB</span><span class="p">)</span></div>
 
 
-
-<div class="viewcode-block" id="kg_to_lb">
-<a class="viewcode-back" href="../../../api/src.unit_conversions.weight_conversions.html#src.unit_conversions.weight_conversions.kg_to_lb">[docs]</a>
-<span class="k">def</span><span class="w"> </span><span class="nf">kg_to_lb</span><span class="p">(</span><span class="n">kilograms</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<div class="viewcode-block" id="kg_to_lb"><a class="viewcode-back" href="../../../api/src.unit_conversions.weight_conversions.html#src.unit_conversions.weight_conversions.kg_to_lb">[docs]</a><span class="k">def</span> <span class="nf">kg_to_lb</span><span class="p">(</span><span class="n">kilograms</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Convert kilograms to pounds.</span>
 <span class="sd">    </span>
@@ -289,10 +268,7 @@
     <span class="k">return</span> <span class="n">multiply</span><span class="p">(</span><span class="n">kilograms</span><span class="p">,</span> <span class="n">KG_TO_LB</span><span class="p">)</span></div>
 
 
-
-<div class="viewcode-block" id="lb_to_kg">
-<a class="viewcode-back" href="../../../api/src.unit_conversions.weight_conversions.html#src.unit_conversions.weight_conversions.lb_to_kg">[docs]</a>
-<span class="k">def</span><span class="w"> </span><span class="nf">lb_to_kg</span><span class="p">(</span><span class="n">pounds</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<div class="viewcode-block" id="lb_to_kg"><a class="viewcode-back" href="../../../api/src.unit_conversions.weight_conversions.html#src.unit_conversions.weight_conversions.lb_to_kg">[docs]</a><span class="k">def</span> <span class="nf">lb_to_kg</span><span class="p">(</span><span class="n">pounds</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Convert pounds to kilograms.</span>
 <span class="sd">    </span>
@@ -315,10 +291,7 @@
     <span class="k">return</span> <span class="n">multiply</span><span class="p">(</span><span class="n">pounds</span><span class="p">,</span> <span class="n">LB_TO_KG</span><span class="p">)</span></div>
 
 
-
-<div class="viewcode-block" id="g_to_oz">
-<a class="viewcode-back" href="../../../api/src.unit_conversions.weight_conversions.html#src.unit_conversions.weight_conversions.g_to_oz">[docs]</a>
-<span class="k">def</span><span class="w"> </span><span class="nf">g_to_oz</span><span class="p">(</span><span class="n">grams</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<div class="viewcode-block" id="g_to_oz"><a class="viewcode-back" href="../../../api/src.unit_conversions.weight_conversions.html#src.unit_conversions.weight_conversions.g_to_oz">[docs]</a><span class="k">def</span> <span class="nf">g_to_oz</span><span class="p">(</span><span class="n">grams</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Convert grams to ounces.</span>
 <span class="sd">    </span>
@@ -341,10 +314,7 @@
     <span class="k">return</span> <span class="n">multiply</span><span class="p">(</span><span class="n">grams</span><span class="p">,</span> <span class="n">G_TO_OZ</span><span class="p">)</span></div>
 
 
-
-<div class="viewcode-block" id="oz_to_g">
-<a class="viewcode-back" href="../../../api/src.unit_conversions.weight_conversions.html#src.unit_conversions.weight_conversions.oz_to_g">[docs]</a>
-<span class="k">def</span><span class="w"> </span><span class="nf">oz_to_g</span><span class="p">(</span><span class="n">ounces</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<div class="viewcode-block" id="oz_to_g"><a class="viewcode-back" href="../../../api/src.unit_conversions.weight_conversions.html#src.unit_conversions.weight_conversions.oz_to_g">[docs]</a><span class="k">def</span> <span class="nf">oz_to_g</span><span class="p">(</span><span class="n">ounces</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Convert ounces to grams.</span>
 <span class="sd">    </span>
@@ -365,7 +335,6 @@
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">_validate_weight</span><span class="p">(</span><span class="n">ounces</span><span class="p">,</span> <span class="s2">&quot;ounces&quot;</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">multiply</span><span class="p">(</span><span class="n">ounces</span><span class="p">,</span> <span class="n">OZ_TO_G</span><span class="p">)</span></div>
-
 </pre></div>
 
            </div>

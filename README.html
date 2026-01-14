@@ -1,21 +1,20 @@
-
-
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" data-content_root="./">
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sphinx Documentation Demo README &mdash; sphinx_doc_demo 0.1.0 documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
-
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
-      <script src="_static/jquery.js?v=5d32c60e"></script>
-      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=01f34227"></script>
-      <script src="_static/doctools.js?v=9a2dae69"></script>
-      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -102,10 +101,10 @@
            <div itemprop="articleBody">
              
   <section id="sphinx-documentation-demo-readme">
-<h1>Sphinx Documentation Demo README<a class="headerlink" href="#sphinx-documentation-demo-readme" title="Link to this heading"></a></h1>
+<h1>Sphinx Documentation Demo README<a class="headerlink" href="#sphinx-documentation-demo-readme" title="Permalink to this headline"></a></h1>
 <p>This repository demonstrates how to utilize Sphinx to automatically create professionally formatted documentation and publish it to GitHub Pages.</p>
 <section id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline"></a></h2>
 <p>This project provides Python modules with utility functions:</p>
 <ol class="arabic simple">
 <li><p><strong>Unit Conversions</strong> - Distance and weight unit conversion functions</p></li>
@@ -114,16 +113,16 @@
 </ol>
 </section>
 <section id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h2>
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline"></a></h2>
 <section id="requirements">
-<h3>Requirements<a class="headerlink" href="#requirements" title="Link to this heading"></a></h3>
+<h3>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline"></a></h3>
 <ul class="simple">
 <li><p>Python 3.11.9</p></li>
 <li><p>uv (Python package manager)</p></li>
 </ul>
 </section>
 <section id="setup">
-<h3>Setup<a class="headerlink" href="#setup" title="Link to this heading"></a></h3>
+<h3>Setup<a class="headerlink" href="#setup" title="Permalink to this headline"></a></h3>
 <p>Clone the repository and synchronize dependencies:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>&lt;repository-url&gt;
 <span class="nb">cd</span><span class="w"> </span>sphinx_doc_demo
@@ -133,9 +132,9 @@ make<span class="w"> </span>sync
 </section>
 </section>
 <section id="modules">
-<h2>Modules<a class="headerlink" href="#modules" title="Link to this heading"></a></h2>
+<h2>Modules<a class="headerlink" href="#modules" title="Permalink to this headline"></a></h2>
 <section id="simple-arithmetic-src-unit-conversions-helper-functions-simple-arithmetic-py">
-<h3>Simple Arithmetic (<code class="docutils literal notranslate"><span class="pre">src/unit_conversions/helper_functions/simple_arithmetic.py</span></code>)<a class="headerlink" href="#simple-arithmetic-src-unit-conversions-helper-functions-simple-arithmetic-py" title="Link to this heading"></a></h3>
+<h3>Simple Arithmetic (<code class="docutils literal notranslate"><span class="pre">src/unit_conversions/helper_functions/simple_arithmetic.py</span></code>)<a class="headerlink" href="#simple-arithmetic-src-unit-conversions-helper-functions-simple-arithmetic-py" title="Permalink to this headline"></a></h3>
 <p>Provides basic arithmetic operations:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">add(a,</span> <span class="pre">b)</span></code> - Add two numbers</p></li>
@@ -149,7 +148,7 @@ make<span class="w"> </span>sync
 <li><p><code class="docutils literal notranslate"><span class="pre">negate(a)</span></code> - Negate a number (multiply by -1)</p></li>
 </ul>
 <p><strong>Example:</strong></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">src.unit_conversions.helper_functions.simple_arithmetic</span><span class="w"> </span><span class="kn">import</span> <span class="n">add</span><span class="p">,</span> <span class="n">multiply</span><span class="p">,</span> <span class="n">power</span><span class="p">,</span> <span class="n">modulo</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">src.unit_conversions.helper_functions.simple_arithmetic</span> <span class="kn">import</span> <span class="n">add</span><span class="p">,</span> <span class="n">multiply</span><span class="p">,</span> <span class="n">power</span><span class="p">,</span> <span class="n">modulo</span>
 
 <span class="n">result</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>        <span class="c1"># Returns 8</span>
 <span class="n">product</span> <span class="o">=</span> <span class="n">multiply</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>  <span class="c1"># Returns 20</span>
@@ -159,9 +158,9 @@ make<span class="w"> </span>sync
 </div>
 </section>
 <section id="unit-conversions">
-<h3>Unit Conversions<a class="headerlink" href="#unit-conversions" title="Link to this heading"></a></h3>
+<h3>Unit Conversions<a class="headerlink" href="#unit-conversions" title="Permalink to this headline"></a></h3>
 <section id="distance-conversions-src-unit-conversions-distance-conversions-py">
-<h4>Distance Conversions (<code class="docutils literal notranslate"><span class="pre">src/unit_conversions/distance_conversions.py</span></code>)<a class="headerlink" href="#distance-conversions-src-unit-conversions-distance-conversions-py" title="Link to this heading"></a></h4>
+<h4>Distance Conversions (<code class="docutils literal notranslate"><span class="pre">src/unit_conversions/distance_conversions.py</span></code>)<a class="headerlink" href="#distance-conversions-src-unit-conversions-distance-conversions-py" title="Permalink to this headline"></a></h4>
 <p>Convert between different distance units:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">mi_to_km(miles)</span></code> - Convert miles to kilometers</p></li>
@@ -178,7 +177,7 @@ make<span class="w"> </span>sync
 <li><p><code class="docutils literal notranslate"><span class="pre">in_to_ft(inches)</span></code> - Convert inches to feet</p></li>
 </ul>
 <p><strong>Example:</strong></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">src.unit_conversions.distance_conversions</span><span class="w"> </span><span class="kn">import</span> <span class="n">mi_to_km</span><span class="p">,</span> <span class="n">ft_to_m</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">src.unit_conversions.distance_conversions</span> <span class="kn">import</span> <span class="n">mi_to_km</span><span class="p">,</span> <span class="n">ft_to_m</span>
 
 <span class="n">km</span> <span class="o">=</span> <span class="n">mi_to_km</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>  <span class="c1"># Returns approximately 8.047</span>
 <span class="n">meters</span> <span class="o">=</span> <span class="n">ft_to_m</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>  <span class="c1"># Returns approximately 3.048</span>
@@ -186,7 +185,7 @@ make<span class="w"> </span>sync
 </div>
 </section>
 <section id="weight-conversions-src-unit-conversions-weight-conversions-py">
-<h4>Weight Conversions (<code class="docutils literal notranslate"><span class="pre">src/unit_conversions/weight_conversions.py</span></code>)<a class="headerlink" href="#weight-conversions-src-unit-conversions-weight-conversions-py" title="Link to this heading"></a></h4>
+<h4>Weight Conversions (<code class="docutils literal notranslate"><span class="pre">src/unit_conversions/weight_conversions.py</span></code>)<a class="headerlink" href="#weight-conversions-src-unit-conversions-weight-conversions-py" title="Permalink to this headline"></a></h4>
 <p>Convert between different weight units:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">lb_to_kg(pounds)</span></code> - Convert pounds to kilograms</p></li>
@@ -201,7 +200,7 @@ make<span class="w"> </span>sync
 <li><p><code class="docutils literal notranslate"><span class="pre">oz_to_lb(ounces)</span></code> - Convert ounces to pounds</p></li>
 </ul>
 <p><strong>Example:</strong></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">src.unit_conversions.weight_conversions</span><span class="w"> </span><span class="kn">import</span> <span class="n">lb_to_kg</span><span class="p">,</span> <span class="n">oz_to_g</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">src.unit_conversions.weight_conversions</span> <span class="kn">import</span> <span class="n">lb_to_kg</span><span class="p">,</span> <span class="n">oz_to_g</span>
 
 <span class="n">kg</span> <span class="o">=</span> <span class="n">lb_to_kg</span><span class="p">(</span><span class="mi">150</span><span class="p">)</span>  <span class="c1"># Returns approximately 68.04</span>
 <span class="n">grams</span> <span class="o">=</span> <span class="n">oz_to_g</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span>    <span class="c1"># Returns approximately 453.59</span>
@@ -210,7 +209,7 @@ make<span class="w"> </span>sync
 </section>
 </section>
 <section id="simple-string-operations-src-simple-string-py">
-<h3>Simple String Operations (<code class="docutils literal notranslate"><span class="pre">src/simple_string.py</span></code>)<a class="headerlink" href="#simple-string-operations-src-simple-string-py" title="Link to this heading"></a></h3>
+<h3>Simple String Operations (<code class="docutils literal notranslate"><span class="pre">src/simple_string.py</span></code>)<a class="headerlink" href="#simple-string-operations-src-simple-string-py" title="Permalink to this headline"></a></h3>
 <p>Provides common string manipulation functions:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">concatenate(str1,</span> <span class="pre">str2)</span></code> - Combine two strings</p></li>
@@ -226,7 +225,7 @@ make<span class="w"> </span>sync
 <li><p><code class="docutils literal notranslate"><span class="pre">is_numeric(text)</span></code> / <code class="docutils literal notranslate"><span class="pre">is_alphabetic(text)</span></code> - Check string type</p></li>
 </ul>
 <p><strong>Example:</strong></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">src.simple_string</span><span class="w"> </span><span class="kn">import</span> <span class="n">concatenate</span><span class="p">,</span> <span class="n">reverse_string</span><span class="p">,</span> <span class="n">split_string</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">src.simple_string</span> <span class="kn">import</span> <span class="n">concatenate</span><span class="p">,</span> <span class="n">reverse_string</span><span class="p">,</span> <span class="n">split_string</span>
 
 <span class="n">greeting</span> <span class="o">=</span> <span class="n">concatenate</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">,</span> <span class="s2">&quot;World&quot;</span><span class="p">)</span>  <span class="c1"># Returns &quot;HelloWorld&quot;</span>
 <span class="n">reversed_text</span> <span class="o">=</span> <span class="n">reverse_string</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">)</span>   <span class="c1"># Returns &quot;olleh&quot;</span>
@@ -236,9 +235,9 @@ make<span class="w"> </span>sync
 </section>
 </section>
 <section id="documentation">
-<h2>Documentation<a class="headerlink" href="#documentation" title="Link to this heading"></a></h2>
+<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline"></a></h2>
 <section id="building-documentation">
-<h3>Building Documentation<a class="headerlink" href="#building-documentation" title="Link to this heading"></a></h3>
+<h3>Building Documentation<a class="headerlink" href="#building-documentation" title="Permalink to this headline"></a></h3>
 <p>Generate HTML documentation using Sphinx:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>link_readme<span class="w"> </span><span class="c1"># only needs to be ran once</span>
 make<span class="w"> </span>docgen
@@ -247,7 +246,7 @@ make<span class="w"> </span>docgen
 <p>The generated documentation will be in <code class="docutils literal notranslate"><span class="pre">docs/_build/html/</span></code>.</p>
 </section>
 <section id="viewing-documentation">
-<h3>Viewing Documentation<a class="headerlink" href="#viewing-documentation" title="Link to this heading"></a></h3>
+<h3>Viewing Documentation<a class="headerlink" href="#viewing-documentation" title="Permalink to this headline"></a></h3>
 <ol class="arabic simple">
 <li><p>Viewing locally</p>
 <ul class="simple">
@@ -274,9 +273,9 @@ make<span class="w"> </span>docgen
 </section>
 </section>
 <section id="development">
-<h2>Development<a class="headerlink" href="#development" title="Link to this heading"></a></h2>
+<h2>Development<a class="headerlink" href="#development" title="Permalink to this headline"></a></h2>
 <section id="available-make-commands">
-<h3>Available Make Commands<a class="headerlink" href="#available-make-commands" title="Link to this heading"></a></h3>
+<h3>Available Make Commands<a class="headerlink" href="#available-make-commands" title="Permalink to this headline"></a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">sync</span></code> - Synchronize project dependencies</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">docgen</span></code> - Generate HTML documentation with Sphinx</p></li>
@@ -284,7 +283,7 @@ make<span class="w"> </span>docgen
 </ul>
 </section>
 <section id="dependencies">
-<h3>Dependencies<a class="headerlink" href="#dependencies" title="Link to this heading"></a></h3>
+<h3>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline"></a></h3>
 <p><strong>Development:</strong></p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">black</span></code> - Code formatter</p></li>
@@ -298,7 +297,7 @@ make<span class="w"> </span>docgen
 </section>
 </section>
 <section id="project-structure">
-<h2>Project Structure<a class="headerlink" href="#project-structure" title="Link to this heading"></a></h2>
+<h2>Project Structure<a class="headerlink" href="#project-structure" title="Permalink to this headline"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sphinx_doc_demo/
 ├── Makefile                  # Build automation
 ├── pyproject.toml            # Project configuration
