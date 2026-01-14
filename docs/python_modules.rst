@@ -1,16 +1,9 @@
 Python Modules
 ===============
 
-Simple Arithmetic Module
--------------------------
+This page documents all Python modules in the ``src`` directory.
 
-.. automodule:: simple_arithmetic
-   :members:
-   :show-inheritance:
+.. toctree::
+   :maxdepth: 4
 
-Simple String Module
----------------------
-
-.. automodule:: simple_string
-   :members:
-   :show-inheritance:
+   api/src

@@ -5,7 +5,7 @@ This module provides functions for converting between common distance units.
 All conversions use helper functions from simple_arithmetic for calculations.
 """
 
-from helper_functions.simple_arithmetic import multiply
+from .helper_functions.simple_arithmetic import multiply
 
 
 # Conversion factors
