@@ -1,8 +1,9 @@
 import os
 import sys
 
-# Add the source directory to the path
-sys.path.insert(0, os.path.abspath("../src"))
+# Add paths for both 'import src.module' and 'from helper_functions import ...'
+sys.path.insert(0, os.path.abspath(".."))  # For 'import src'
+sys.path.insert(0, os.path.abspath("../src"))  # For legacy absolute imports
 
 # Project information
 project = "sphinx_doc_demo"
@@ -26,4 +27,9 @@ html_theme = "sphinx_rtd_theme"
 # Intersphinx mapping
 intersphinx_mapping = {
     "python": ("https://docs.python.org/3", None),
+}
+
+# How deep the navigation tree should go
+html_theme_options = {
+    'navigation_depth': -1,  # unlimited depth
 }

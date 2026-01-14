@@ -1,14 +1,14 @@
-# Sphinx Documentation Demo
+# Sphinx Documentation Demo README
 
 This repository demonstrates how to utilize Sphinx to automatically create professionally formatted documentation and publish it to GitHub Pages.
-Test Test Test
 
 ## Overview
 
-This project provides two simple Python modules with utility functions:
+This project provides Python modules with utility functions:
 
-1. **Simple Arithmetic** - Basic mathematical operations
-2. **Simple String Operations** - Common string manipulation functions
+1. **Unit Conversions** - Distance and weight unit conversion functions
+2. **Simple Arithmetic** - Basic mathematical operations (helper functions)
+3. **Simple String Operations** - Common string manipulation functions
 
 ## Installation
 
@@ -29,7 +29,7 @@ make sync
 
 ## Modules
 
-### Simple Arithmetic (`src/simple_arithmetic.py`)
+### Simple Arithmetic (`src/unit_conversions/helper_functions/simple_arithmetic.py`)
 
 Provides basic arithmetic operations:
 
@@ -38,14 +38,69 @@ Provides basic arithmetic operations:
 - `multiply(a, b)` - Multiply two numbers
 - `divide(a, b)` - Divide two numbers (with zero-check)
 - `power(a, b)` - Raise a number to a power
+- `modulo(a, b)` - Calculate remainder of division
+- `floor_divide(a, b)` - Perform floor division (integer division)
+- `absolute(a)` - Get the absolute value of a number
+- `negate(a)` - Negate a number (multiply by -1)
 
 **Example:**
 ```python
-from src.simple_arithmetic import add, multiply, power
+from src.unit_conversions.helper_functions.simple_arithmetic import add, multiply, power, modulo
 
 result = add(5, 3)        # Returns 8
 product = multiply(4, 5)  # Returns 20
 squared = power(2, 3)     # Returns 8
+remainder = modulo(10, 3) # Returns 1
+```
+
+### Unit Conversions
+
+#### Distance Conversions (`src/unit_conversions/distance_conversions.py`)
+
+Convert between different distance units:
+
+- `mi_to_km(miles)` - Convert miles to kilometers
+- `km_to_mi(kilometers)` - Convert kilometers to miles
+- `ft_to_m(feet)` - Convert feet to meters
+- `m_to_ft(meters)` - Convert meters to feet
+- `m_to_km(meters)` - Convert meters to kilometers
+- `km_to_m(kilometers)` - Convert kilometers to meters
+- `m_to_cm(meters)` - Convert meters to centimeters
+- `cm_to_m(centimeters)` - Convert centimeters to meters
+- `mi_to_ft(miles)` - Convert miles to feet
+- `ft_to_mi(feet)` - Convert feet to miles
+- `ft_to_in(feet)` - Convert feet to inches
+- `in_to_ft(inches)` - Convert inches to feet
+
+**Example:**
+```python
+from src.unit_conversions.distance_conversions import mi_to_km, ft_to_m
+
+km = mi_to_km(5)  # Returns approximately 8.047
+meters = ft_to_m(10)  # Returns approximately 3.048
+```
+
+#### Weight Conversions (`src/unit_conversions/weight_conversions.py`)
+
+Convert between different weight units:
+
+- `lb_to_kg(pounds)` - Convert pounds to kilograms
+- `kg_to_lb(kilograms)` - Convert kilograms to pounds
+- `oz_to_g(ounces)` - Convert ounces to grams
+- `g_to_oz(grams)` - Convert grams to ounces
+- `kg_to_g(kilograms)` - Convert kilograms to grams
+- `g_to_kg(grams)` - Convert grams to kilograms
+- `g_to_mg(grams)` - Convert grams to milligrams
+- `mg_to_g(milligrams)` - Convert milligrams to grams
+- `lb_to_oz(pounds)` - Convert pounds to ounces
+- `oz_to_lb(ounces)` - Convert ounces to pounds
+
+**Example:**
+```python
+from src.unit_conversions.weight_conversions import lb_to_kg, oz_to_g
+
+kg = lb_to_kg(150)  # Returns approximately 68.04
+grams = oz_to_g(16)    # Returns approximately 453.59
 ```
 
 ### Simple String Operations (`src/simple_string.py`)
@@ -121,15 +176,24 @@ The generated documentation will be in `docs/_build/html/`.
 
 ```
 sphinx_doc_demo/
-├── Makefile              # Build automation
-├── pyproject.toml        # Project configuration
-├── README.md            # This file
-├── docs/                # Sphinx documentation
-│   ├── conf.py         # Sphinx configuration
-│   ├── index.rst       # Documentation index
-│   ├── python_modules.rst
-│   └── _build/         # Generated documentation
-└── src/                # Source code
-    ├── simple_arithmetic.py
-    └── simple_string.py
+├── Makefile                  # Build automation
+├── pyproject.toml            # Project configuration
+├── README.md                 # This file
+├── docs/                     # Sphinx documentation
+│   ├── conf.py              # Sphinx configuration
+│   ├── index.rst            # Documentation index
+│   ├── python_modules.rst   # Python modules documentation
+│   ├── api/                 # Auto-generated API docs
+│   └── _build/              # Generated documentation
+│       └── html/            # HTML output
+└── src/                     # Source code
+    ├── __init__.py
+    ├── simple_string.py     # String operations
+    └── unit_conversions/    # Unit conversion modules
+        ├── __init__.py
+        ├── distance_conversions.py
+        ├── weight_conversions.py
+        └── helper_functions/
+            ├── __init__.py
+            └── simple_arithmetic.py
 ```

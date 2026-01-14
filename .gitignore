@@ -1,0 +1,5 @@
+docs/_build
+docs/api
+docs/README.md
+*.pyc
+.DS_Store
