@@ -15,6 +15,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    container: python:3.7-slim
 
     steps:
       - name: 'Checkout repository'
@@ -23,7 +24,11 @@ jobs:
       - name: 'Set up Python'
         uses: astral-sh/setup-uv@v5
 
+      - name: 'Install make'
+        run: apt-get update && apt-get install -y make
+
       - name: 'Install dependencies and build documentation'
+        shell: bash
         run: |
           uv venv
           source .venv/bin/activate
