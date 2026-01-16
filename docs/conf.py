@@ -13,12 +13,21 @@ release = "0.1.0"
 
 # General configuration
 extensions = [
-    "sphinx.ext.autodoc",  # Auto-generate documentation from docstrings
+    "autodoc2",  # Modern auto-documentation from docstrings
     "sphinx.ext.napoleon",  # Support for Google and NumPy style docstrings
-    "sphinx.ext.viewcode",  # Add links to source code
+    # "sphinx.ext.viewcode",  # Add links to source code (requires importing modules)
     "sphinx.ext.intersphinx",  # Link to other project's documentation
     "myst_parser",  # Support for Markdown files
 ]
+
+# autodoc2 configuration
+autodoc2_packages = [
+    "../src",  # Point to your source package
+]
+autodoc2_render_plugin = "myst"  # Use MyST for rendering (or "rst" for reStructuredText)
+
+# Use static analysis to avoid importing modules (prevents print statements from executing)
+autodoc2_skip_importing = True
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
 # HTML output options

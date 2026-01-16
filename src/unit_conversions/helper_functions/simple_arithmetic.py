@@ -3,6 +3,10 @@ Simple Arithmetic Operations Module
 
 This module provides basic arithmetic functions for demonstration purposes.
 """
+print("FooFooFooFooFooFooFooFooFooFooFooFooFooFooFooFooFooFooFooFooFooFooFooFooFooFooFooFooFooFooFooFooFooFooFooFooFooFooFooFooFooFooFooFooFooFooFooFooFooFooFoo")
+
+if __name__ == "__main__":
+    print("MainMainMainMainMainMainMainMainMainMainMainMainMainMainMainMainMainMainMainMainMainMainMainMainMainMainMainMainMainMainMainMainMainMainMainMainMainMainMainMainMainMainMainMainMainMain")
 
 
 def add(a: float, b: float) -> float:
@@ -56,6 +60,7 @@ def multiply(a: float, b: float) -> float:
         >>> multiply(4, 5)
         20
     """
+    print("TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest")
     return a * b
 
 
